@@ -27,10 +27,9 @@ flex-direction: column;
     min-height: 20rem;
     
   }
-  
-  /* .checkbox-container{
-    padding: 0.1rem;
-  } */
+  .checkbox-container{
+ pointer-events: none;
+  }
   .submit-button {
     padding: 10px 20px;
     border: none;
@@ -79,6 +78,7 @@ flex-direction: column;
 
   }
   .checkmark {
+    pointer-events: none;
     display: inline-block;
     width: 18px;
     height: 18px;

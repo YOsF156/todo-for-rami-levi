@@ -28,15 +28,14 @@ const ChecklistApp = () => {
 
     const handleCheckboxChange = (index) => {
         setItems((prevItems) => {
-            const updatedItems = prevItems.map((v, i) => {
-                if (i == index) {
-                    v.checked = !v.checked
-                }
-                return v
-            }).sort(v => v.checked ? 1 : 0)
-            // const checkedItem = updatedItems.splice(index, 1)[0];
-            // checkedItem.checked = !checkedItem.checked;
-            // updatedItems.splice(updatedItems.length - 1, 0, checkedItem);
+            // const updatedItems = prevItems.map((v, i) => {
+            //     if (i == index) {
+            //         v.checked = !v.checked
+            //     }
+            //     return v
+            // }).sort(v => v.checked ? 1 : 0)
+            const updatedItems = [...prevItems]
+            updatedItems[index].checked = !updatedItems[index].checked
             return updatedItems;
         });
     };
@@ -70,7 +69,7 @@ const ChecklistApp = () => {
                                 checked={item.checked}
                             // onChange={() => handleCheckboxChange(index)}
                             />
-                            <span className="checkmark"></span>
+                            <span className="checkmark" ></span>
                         </label>
                         <span className="item-text">{item.text}</span>
                     </li>
