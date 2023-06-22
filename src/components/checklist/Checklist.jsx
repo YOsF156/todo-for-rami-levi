@@ -48,14 +48,14 @@ const ChecklistApp = () => {
                     className="input-field"
                     value={text}
                     onChange={handleInputChange}
-                    placeholder="הדבק את הרשימה שלך"
+                    placeholder="הדבק את הרשימה שלך או רענן לרשימה הקודמת..."
                 ></textarea>
                 <button className="submit-button" onClick={handleSubmit}>
                     סדר לי את הרשימה
                 </button>
             </div> :
                 <button className="clear-button" onClick={() => setItems([])}>
-                    clear
+                    נקה רשימה
                 </button>
             }
             <ul className="checklist">
